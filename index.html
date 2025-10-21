@@ -1,3 +1,149 @@
-<h1>assalomu aleykum
-<h1>assalomu aleykum</h1>
-<h3>hellohello</h3>
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio - Ranglar palitrasi</title>
+  <style>
+    /* Tanlang: quyidagi bloklardan birini faollashtiring (kommentni olib tashlang) */
+
+    /* === Modern Minimal === */
+    :root{
+      --bg: #0F1724;
+      --card: #0B1220;
+      --primary: #4FD1C5;
+      --accent: #60A5FA;
+      --muted: #94A3B8;
+      --text: #E6EEF6;
+    }
+
+    /* === Light & Clean ===
+    :root{
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --primary: #0EA5A4;
+      --accent: #2563EB;
+      --muted: #64748B;
+      --text: #0F1724;
+    }
+    */
+
+    /* === Warm Creative ===
+    :root{
+      --bg: #FFF7ED;
+      --card: #FFFBF6;
+      --primary: #F97316;
+      --accent: #F43F5E;
+      --muted: #7C3AED;
+      --text: #2B2B2B;
+    }
+    */
+
+    /* Umumiy stil */
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.45;
+      padding:40px;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      margin-bottom:32px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      font-size:18px;
+    }
+    .logo .dot{
+      width:12px; height:12px; border-radius:50%;
+      background: linear-gradient(135deg,var(--primary),var(--accent));
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+
+    .card{
+      background: var(--card);
+      padding:20px;
+      border-radius:12px;
+      box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+    }
+
+    h1{margin:0 0 8px 0}
+    p.lead{margin:0 0 16px 0; color:var(--muted)}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      background:var(--primary);
+      color: #fff;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .btn:hover{ transform:translateY(-3px); box-shadow:0 10px 30px rgba(0,0,0,0.18) }
+
+    /* Rang namunasi paneli */
+    .palette{
+      display:flex;
+      gap:12px;
+      margin-top:18px;
+    }
+    .swatch{
+      flex:1;
+      min-width:72px;
+      border-radius:10px;
+      padding:12px;
+      color:var(--text);
+      text-align:center;
+    }
+    .swatch small{display:block; margin-top:8px; font-size:12px; color:var(--muted)}
+    .swatch.code{font-family:monospace; font-size:13px;}
+
+    /* Responsive */
+    @media (max-width:640px){
+      body{padding:18px}
+      .palette{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><span class="dot"></span> <span>Ism Familiya</span></div>
+      <nav>
+        <a class="btn" href="#projects">Portfolio'ga o'tish</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <h1>Salom! Men — Web developer</h1>
+      <p class="lead">Bu yerda mening tanlangan rang palitram ishlatilgan. Tez sozlash uchun :root ichidagi rang o'zgaruvchilarini tahrirlashingiz kifoya.</p>
+
+      <div class="palette" aria-hidden="true">
+        <div class="swatch" style="background:var(--primary)"><div class="code">--primary</div><small>#xxxxxx</small></div>
+        <div class="swatch" style="background:var(--accent)"><div class="code">--accent</div><small>#xxxxxx</small></div>
+        <div class="swatch" style="background:var(--card); color:var(--muted)"><div class="code">--card</div><small>kart fon</small></div>
+        <div class="swatch" style="background:var(--bg)"><div class="code">--bg</div><small>fon</small></div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
